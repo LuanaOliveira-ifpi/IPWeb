@@ -4,22 +4,39 @@
 <body>    
     <style>
     body{
-        background:-webkit-linear-gradient(left,#ff9a9a98, #ffa9c463);
-        background:-o-linear-gradient(right,#ff9a9a96, #ffa9c463);
-        background:-moz-radial-gradient(right,#ff9a9a96, #ffa9c4a6);
-        background:linear-gradient(to right,#ff9a9a96, #ffa9c4a6);
-        background-color: #ff9a9a96;
+       -webkit-animation: colorchange 60s infinite;
+        animation: colorchange 60s infinite;
     }
-    h1{
-        background: linear-gradient(to right,#ffdcdcfb, #f73572a6);
-        background-color: #ffdcdcfb;
-        text-align: center;
+    @-webkit-keyframes colorchange {
+        0% {background: #ffa1c1;}
+        25% {background: #f53eaf;}
+        40% {background: rgb(255, 98, 98)}
+        60% {background: rgb(250, 106, 250)}
+        80% {background: rgb(248, 248, 143)}
+        90% {background: #ffa1c1;}
+        100% {background: #fdd3e1;}
     }
+    @keyframes colorchange {
+        0% {background: #ffa1c1;}
+        25% {background: #f53eaf;}
+        40% {background: rgb(255, 98, 98)}
+        60% {background: rgb(250, 106, 250)}
+        80% {background: rgb(248, 248, 143)}
+        90% {background: #ffa1c1;}
+        100% {background: #fdd3e1;}
+        }
+       
 
-    p{background: linear-gradient(to right,#ffdcdcfb, #f73572a6);
-        background-color: #ffdcdcfb;
-    }
-   </style>
+    div{
+        text-align: center;
+         background: linear-gradient(to right,#ffdcdcfb, #f73572a6);
+         background-color: #ffdcdcfb;
+         border-radius: 1%;
+
+        }
+  
+  </style>
+
 
 </body>
 
@@ -31,9 +48,9 @@
     <a href="contato.html">Contato</a> §
 
    
-   
+   <div>
     <h1>§Atividade 01§</h1>
-   
+   </div>
     
 
 </body>

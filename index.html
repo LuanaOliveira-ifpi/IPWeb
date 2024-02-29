@@ -5,18 +5,34 @@
     <title>Luana Oliveira</title>
 <style>
         body{
-            background: -webkit-linear-gradient(left,#ff9a9afb, #ffa9c4a6);
-           background: -o-linear-gradient(right,#ff9a9afb, #ffa9c4a6);
-            background: -moz-radial-gradient(right,#ff9a9afb, #ffa9c4a6);
-            background: linear-gradient(to right,#ff9a9afb, #ffa9c4a6);
-            background-color: #ff1259;
-        }
-        h1{
+            -webkit-animation: colorchange 60s infinite;
+        animation: colorchange 60s infinite;
+    }
+    @-webkit-keyframes colorchange {
+        0% {background: #ffa1c1;}
+        25% {background: #f53eaf;}
+        40% {background: rgb(255, 98, 98)}
+        60% {background: rgb(250, 106, 250)}
+        80% {background: rgb(248, 248, 143)}
+        90% {background: #ffa1c1;}
+        100% {background: #fdd3e1;}
+     }
+    @keyframes colorchange {
+        0% {background: #ffa1c1;}
+        25% {background: #f53eaf;}
+        40% {background: rgb(255, 98, 98)}
+        60% {background: rgb(250, 106, 250)}
+        80% {background: rgb(248, 248, 143)}
+        90% {background: #ffa1c1;}
+        100% {background: #fdd3e1;}
+     }
+        
+        .nome{
             background: linear-gradient(to right,#ffdcdcfb, #f73572a6);
             background-color: #ffdcdcfb;
             text-align: center;
         }
-        div{
+        .link{
             text-align: center;
             background-color: whitesmoke;
             margin-left:300px;
@@ -25,8 +41,7 @@
             margin-bottom:300px ;
             border-radius: 70%;
             padding: 10%;
-
-        }
+            }
        
 
 </style>
@@ -34,9 +49,11 @@
 </head>
 
 <body>
+    <div class="nome">
     <h1>§ Luana Maria de Oliveira Costa §</h1>
-    
-    <div> 
+    </div>
+
+    <div class="link"> 
      <a href="01" target="_blank"># Atividade 01 #</a>
     </div>
 </body>
