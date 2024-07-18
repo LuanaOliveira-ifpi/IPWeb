@@ -6,73 +6,99 @@
     <title>Atividade A</title>
 
     <style type="text/css">
+
+#header{
+            position: fixed;
+            width: 100%;
+            height: 15%;
+            background:blue;
+            top:0px;
+            left: 0px;
+            right: 0px;
+            text-align: center;
+            align-content: center;
+            z-index: 1000;
+        }
+        #menu{
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            background:red;
+            top: 15%;
+            left: 0px;
+            right: 0px;
+            text-align: center;
+            align-content: center;
+        }
+        #center{
+            background: green;
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            left: 25%;
+            right: 25%;
+            top: 25%;
+            text-align: center;
+            align-content: center;
+        }
+        #left{
+            background: rgb(253, 253, 165);
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            left: 0%;
+            right: 75%;
+            top: 25%;
+            text-align: center;
+            align-content: center;
+        }
+        #right{
+            background: rgb(241, 204, 105);
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            left: 75%;
+            right: 0%;
+            top: 25%;
+            text-align: center;
+            align-content: center;
+        }
+        #footer{
+            background: rgb(240, 154, 255);
+            position: absolute;
+            width: 100%;
+            height: 10%;
+            left: 0%;
+            right: 0%;
+            top: 125%;
+            text-align: center;
+            align-content: center;
+        }
+
          
     </style>
-   <style>
-    body{
-       -webkit-animation: colorchange 60s infinite;
-        animation: colorchange 60s infinite;
-    }
-    @-webkit-keyframes colorchange {
-        0% {background: #ffa1c1;}
-        25% {background: #f53eaf;}
-        40% {background: rgb(255, 98, 98)}
-        60% {background: rgb(250, 106, 250)}
-        80% {background: rgb(248, 248, 143)}
-        90% {background: #ffa1c1;}
-        100% {background: #fdd3e1;}
-    }
-    @keyframes colorchange {
-        0% {background: #ffa1c1;}
-        25% {background: #f53eaf;}
-        40% {background: rgb(255, 98, 98)}
-        60% {background: rgb(250, 106, 250)}
-        80% {background: rgb(248, 248, 143)}
-        90% {background: #ffa1c1;}
-        100% {background: #fdd3e1;}
-        }
-       
-
-    div{
-        text-align: center;
-         background: linear-gradient(to right,#ffdcdcfb, #f73572a6);
-         background-color: #ffdcdcfb;
-         border-radius: 1%;
-         font-family:'Times New Roman', Times, serif;
-         font-style: italic;
-        }
-  
-  </style>
-
 
 </body>
 </head>
-<body>
   <body>
     <div id="header" class="header">
-        <h1>HEADER</h1>
+        <h1>Header</h1>
     </div>
     <div id="menu" class="menu">
-        <h4>MENU</h4>
+        <h4>Menu</h4>
     </div>
     <div id="center" class="center">
-        <h2>CENTER</h2>
+        <h2>Center</h2>
     </div>
     <div id="left" class="left">
-        <h3>LEFT</h3>
+        <h3>Left</h3>
     </div>
     <div id="right" class="right">
-        <h3>RIGHT</h3>
+        <h3>Right</h3>
     </div>
     <div id="footer" class="footer">
-        <h5>FOOTER</h5>
+        <h5>Footer</h5>
     </div>
     
 </body>
-  
-  <div>
-      <title>Atividade A</title>
-   </div>
-    
-
-</body>
+</html>
