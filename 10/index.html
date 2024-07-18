@@ -1,101 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Atividade 10</title>
-    <title2>NEWS</title2>
-  <style>
+    <title>Atividade 10</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
+        header, footer {
             text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
+        .links {
+            text-align: right;
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
         }
-        nav a {
-            color: #fff;
-            padding: 14px 20px;
+        .links a {
+            color: #333;
             text-decoration: none;
+            margin-left: 10px;
+        }
+        .links a img {
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .news-wrapper {
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .news-item {
+            float: left;
+            width: 23%;
+            margin: 0 1% 10px 1%;
+            background-color: #f9f9f9;
             text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
         }
-        nav a:hover {
-            background-color: #555;
+        .news-item img {
+            width: 100px;
+            height: 75px;
         }
-        .container {
-            padding: 20px;
+        .news-item h2 {
+            font-size: 0.9em;
+            margin: 10px 0;
         }
-        footer {
+        .news-item p {
+            margin: 0;
+            font-size: 0.8em;
+        }
+        .news-item .timestamp {
+            font-size: 0.7em;
+            color: #666;
+            margin-top: 10px;
+        }
+        .news-item a {
+            display: inline-block;
             background-color: #333;
             color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+        .news-item a:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Site de Notícias</h1>
+    <h1>News</h1>
 </header>
 
-<nav>
-    <a href="#home">Início</a>
-    <a href="#politica">Política</a>
-    <a href="#economia">Economia</a>
-    <a href="#esportes">Esportes</a>
-    <a href="#cultura">Cultura</a>
-    <a href="#tecnologia">Tecnologia</a>
-</nav>
+<div class="links">
+    <a href="https://www.cnnbrasil.com.br/" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAcIOFz3H5PMBQtQZBP_aznkjyPi3ibCb23A&s" alt="CNN Logo"> CNN
+    </a>
+    <a href="https://g1.globo.com/" target="_blank">
+        <img src="https://s.glbimg.com/jo/g1/static/live/imagens/img_facebook.png?g1" alt="G1 Logo"> G1
+    </a>
+    <a href="https://g1.globo.com/globonews/" target="_blank">
+        <img src="https://gkpb.com.br/wp-content/uploads/2022/08/novo-logo-globonews-2022jpg.jpg" alt="GloboNews Logo"> GloboNews
+    </a>
+    <a href="https://noticias.r7.com/" target="_blank">
+        <img src="https://www.hojeemdia.com.br/image/policy:1.64307.1628401321:1628401321/image.jpg?w=1280&" alt="R7 Logo"> R7.com
+    </a>
+</div>
 
-<div class="container">
-    <section id="home" class="section">
-        <h2>Início</h2>
-        <img src="https://via.placeholder.com/600x300?text=In%C3%ADcio" alt="Início">
-        <p>Bem-vindo ao Portal News. Aqui você encontra as últimas notícias do seu assunto favorito.</p>
-    </section>
+<div class="news-wrapper">
+    <div class="news-item">
+        <img src="https://s2-g1.glbimg.com/jbSqPIcXSt2xIFGgJBjE2B40T1c=/0x0:4196x2797/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/T/D/W8gY9SR8uSZ8DKuB0EXg/2024-07-12t001540z-65894196-rc26t8az5pz7-rtrmadp-3-nato-summit-biden.jpg" alt="Notícia 1">
+        <h2>CNN</h2>
+        <p>Biden tenta salvar campanha; democratas dizem que as coisas só estão piorando.</p>
+        <p class="timestamp">Postado por: Luciana Gimenez | 18/07/2024</p>
+        <a href="#">Leia mais</a>
+    </div>
     
-    <section id="politica" class="section">
-        <h2>Política</h2>
-        <img src="https://s2-extra.glbimg.com/s6fyBFp2RjH3jGFn9zRYrOIAzmk=/540x304/top/smart/filters:max_age(3600)/https://s01.video.glbimg.com/deo/vi/51/56/12765651" alt="Política">
-        <p>Últimas notícias sobre política.</p>
-    </section>
+    <div class="news-item">
+        <img src="https://s2-g1.glbimg.com/kQq04-EjRxbjcPJ1cEGnoMAHIzk=/0x0:322x567/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/Z/4/yf6ePSTvG2EtrKSyHkuA/captura-de-tela-2024-07-18-145404.png" alt="Notícia 2">
+        <h2>G1</h2>
+        <p>Hugh Jackman recebe presente inusitado de influenciadora carioca: um filtro de barro.</p>
+        <p class="timestamp">Postado por: João Francisco| 18/07/2024</p>
+        <a href="#">Leia mais</a>
+    </div>
     
-    <section id="economia" class="section">
-        <h2>Economia</h2>
-        <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/06/Captura-de-tela-2024-06-13-141417.png?w=1004" alt="Economia">
-        <p>Últimas notícias sobre economia.</p>
-    </section>
+    <div class="news-item">
+        <img src="https://static.cdn.pleno.news/2024/07/Estudio-i-GLobo-News.png" alt="Notícia 3">
+        <h2>Globo.news</h2>
+        <p>Jornalista da GloboNews critica memes e fala em regulamentação.</p>
+        <p class="timestamp">Postado por: Vitória Virna| 18/07/2024</p>
+        <a href="#">Leia mais</a>
+    </div>
     
-    <section id="esportes" class="section">
-        <h2>Esportes</h2>
-        <img src="https://www.opovo.com.br/_midias/jpg/2021/06/21/750x500/1_olimpiadas_19-16169440.jpg" alt="Esportes">
-        <p>Últimas notícias sobre esportes.</p>
-    </section>
-    
-    <section id="cultura" class="section">
-        <h2>Cultura</h2>
-        <img src="https://blog.stoodi.com.br/wp-content/uploads/2018/06/o-que-e-cultura-fique-por-dentro-do-assunto.jpg" alt="Cultura">
-        <p>Últimas notícias sobre cultura.</p>
-    </section>
-    
-    <section id="tecnologia" class="section">
-        <h2>Tecnologia</h2>
-        <img src="https://www.insper.edu.br/wp-content/uploads/2023/08/thumb-Profissoes-de-tecnologia-perspectivas-e-demanda-atual.jpg" alt="Tecnologia">
-        <p>Últimas notícias sobre tecnologia.</p>
-    </section>
+    <div class="news-item">
+        <img src="https://cdn6.campograndenews.com.br/uploads/noticias/2024/07/18/2a9e1815ab378d98abd0863c31434616dac225b5.jpg" alt="Notícia 4">
+        <h2>R7.com</h2>
+        <p>Com Palmeiras x Flamengo, sorteio define oitavas de final da Copa do Brasil.</p>
+        <p class="timestamp">Postado por: Autor 4 | 18/07/2024</p>
+        <a href="#">Leia mais</a>
+    </div>
 </div>
 
 <footer>
@@ -104,4 +140,3 @@
 
 </body>
 </html>
-      
