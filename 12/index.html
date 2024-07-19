@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title> Atividade 12 </title>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="estilo.css">
+    <script type="text/javascript">
+      function mostrarvalor(componente){
+            var valor = componente.getAttribute('data-idade');
+            alert(valor);
+        }
+    </script>
+   <style>
+        .pessoa{
+            color:red;
+        }
+        .pessoa[data-idade='30']{
+            color: blue;
+        }
+        .pessoa::before {
+            content: 'antes';
+        }
+        .pessoa::after {
+            content: 'depois' ;
+        }
+
+  <body>
+    <ul>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="20" data-cpf="999">João</li>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="30" data-cpf="888">José</li>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="40" data-cpf="777">Maria</li>
+    </ul>
+</body>
+
+  
