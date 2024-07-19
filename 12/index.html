@@ -20,16 +20,16 @@
             content: 'Nome: ';
         }
         .pessoa::after {
-            content: ' - Idade: ' attr(data-idade) ' - C.P.F: ' attr(data-cpf);
+            content: ' - Idade: 'attr(data-idade) / ' - C.P.F: ' attr(data-cpf);
         }
     </style>
 
 </head>
 <body>
     <ul>
-        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="20" data-cpf="999">Jesus</li>
-        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="30" data-cpf="888">Maria</li>
-        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="40" data-cpf="777">José</li>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="25" data-cpf="999">João</li>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="35" data-cpf="888">Vitória</li>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="44" data-cpf="777">Maria</li>
     </ul>  
 </body>
 </html>
