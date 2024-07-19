@@ -9,27 +9,27 @@
             alert(valor);
   }
     </script>
-   <style>
+    <style>
         .pessoa{
             color:red;
         }
         .pessoa[data-idade='30']{
             color: blue;
         }
-        .pessoa:: before {
-            content: ' Nome: '; 
+        .pessoa::before {
+            content: 'Nome: ';
         }
-       .pessoa:: after {
-            content: '- Idade: ' attr(data-idade) ' - C.P.F: ' attr(data-cpf);
-           }
-</style>
+        .pessoa::after {
+            content: ' - Idade: ' attr(data-idade) ' - C.P.F: ' attr(data-cpf);
+        }
+    </style>
+
 </head>
-  <body>
-   
-      <ul>
-        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="20" data-cpf="999">João</li>
-        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="30" data-cpf="888">José</li>
-        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="40" data-cpf="777">Maria</li>
-    </ul>
+<body>
+    <ul>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="20" data-cpf="999">Jesus</li>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="30" data-cpf="888">Maria</li>
+        <li class="pessoa" onclick="mostrarvalor(this)" data-idade="40" data-cpf="777">José</li>
+    </ul>  
 </body>
 </html>
