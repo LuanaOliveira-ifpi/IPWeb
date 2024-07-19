@@ -13,14 +13,14 @@
         .pessoa{
             color:red;
         }
-        .pessoa[data-idade='30']{
+        .pessoa[data-idade='35']{
             color: blue;
         }
         .pessoa::before {
             content: 'Nome: ';
         }
         .pessoa::after {
-            content: ' - Idade: 'attr(data-idade) / ' - C.P.F: ' attr(data-cpf);
+            content: ' - Idade: 'attr(data-idade) ' - C.P.F: ' attr(data-cpf);
         }
     </style>
 
