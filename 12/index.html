@@ -7,7 +7,7 @@
       function mostrarvalor(componente){
             var valor = componente.getAttribute('data-idade');
             alert(valor);
-        }
+       = }
     </script>
    <style>
         .pessoa{
@@ -19,12 +19,9 @@
         .pessoa::before {
             content: 'Nome:'; 
         }
-        }
        .pessoa::before {
-            content: '- Idade:' attr(data-idade) ' C.P.F: ' attr(data-cpf);
+            content: '- Idade:' attr(data-idade) '- C.P.F: ' attr(data-cpf);
             position: absolute;
-            left: -4em;
-            right: -4em;
            }
 </style>
 </head>
