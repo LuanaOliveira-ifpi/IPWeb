@@ -17,11 +17,15 @@
             color: blue;
         }
         .pessoa::before {
-            content: 'antes';
+            content: 'Nome:'; 
         }
-        .pessoa::after {
-            content: 'depois' ;
         }
+       .pessoa::before {
+            content: '- Idade:' attr(data-idade) ' C.P.F: ' attr(data-cpf);
+            position: absolute;
+            left: -4em;
+            right: -4em;
+           }
 </style>
 </head>
   <body>
