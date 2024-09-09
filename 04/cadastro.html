@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+  
+     <form action="http://191.252.62.149:8080/pweb/salvar.jsp" method="post">
+        Login:<br/>
+        <input type="text" name="login" placeholder="Digite seu login"><br/><br/>
+
+        Senha:<br/>
+        <input type="password" name="senha" placeholder="Digite sua senha"><br/><br/>
+
+        Confirmar senha:<br/>
+        <input type="password" name="confirmarsenha" placeholder="Repita sua senha"><br/><br/>
+
+        Nome:<br/>
+        <input type="text" name="nome" placeholder="Digite seu nome"><br/><br/>
+
+        Sexo:<br/>
+        <input type="radio" value="M" name="sexo">Masculino<br/>
+        <input type="radio" value="F" name="sexo">Feminino<br/><br/>
+
+        Data de Nascimento:<br/>
+        <input type="date" name="datanascimento"><br/><br/>
+
+        Estado:<br/>
+        <select name="estado">
+            <option value="AC">ACRE</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+          </select><br/><br/>
+
+        Email:<br/>
+        <input type="email" name="email" placeholder="Digite seu email"><br/><br/>
+        
+        Interesses:<br/>
+        <input type="checkbox" name="Interesses">Futebol<br/>
+        <input type="checkbox" name="Interesses">Política<br/>
+        <input type="checkbox" name="Interesses">Economia<br/>
+        <input type="checkbox" name="Interesses">Carros<br/>
+        <input type="checkbox" name="Interesses">Celebridades<br/><br/>
+
+        Observações:<br/>
+        <textarea name="Observação" rows="4" cols="50">
+            
+        </textarea>
+
+        <br/>
+
+        <input type="submit" value="Enviar">
+
+     </form>
+</body>
+</html>
 
