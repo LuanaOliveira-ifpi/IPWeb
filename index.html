@@ -1,94 +1,117 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Luana Oliveira</title>
-<style>
-        body{
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades - Luana Oliveira</title>
+    <style>
+        body {
             -webkit-animation: colorchange 60s infinite;
-        animation: colorchange 60s infinite;
-    }
-    @-webkit-keyframes colorchange {
-        0% {background: #ffa1c1;}
-        25% {background: #f53eaf;}
-        40% {background: rgb(255, 98, 98)}
-        60% {background: rgb(250, 106, 250)}
-        80% {background: rgb(248, 248, 143)}
-        90% {background: #ffa1c1;}
-        100% {background: #fdd3e1;}
-     }
-    @keyframes colorchange {
-        0% {background: #ffa1c1;}
-        25% {background: #f53eaf;}
-        40% {background: rgb(255, 98, 98)}
-        60% {background: rgb(250, 106, 250)}
-        80% {background: rgb(248, 248, 143)}
-        90% {background: #ffa1c1;}
-        100% {background: #fdd3e1;}
-     }
-        
-        .nome{
-            background: linear-gradient(to right,#ffdcdcfb, #f73572a6);
+            animation: colorchange 60s infinite;
+            font-family: Arial, sans-serif;
+        }
+        @-webkit-keyframes colorchange {
+            0% { background: #ffa1c1; }
+            25% { background: #f53eaf; }
+            40% { background: rgb(255, 98, 98); }
+            60% { background: rgb(250, 106, 250); }
+            80% { background: rgb(248, 248, 143); }
+            90% { background: #ffa1c1; }
+            100% { background: #fdd3e1; }
+        }
+        @keyframes colorchange {
+            0% { background: #ffa1c1; }
+            25% { background: #f53eaf; }
+            40% { background: rgb(255, 98, 98); }
+            60% { background: rgb(250, 106, 250); }
+            80% { background: rgb(248, 248, 143); }
+            90% { background: #ffa1c1; }
+            100% { background: #fdd3e1; }
+        }
+        .nome {
+            background: linear-gradient(to right, #ffdcdcfb, #f73572a6);
             background-color: #ffdcdcfb;
             text-align: center;
-            font-family:'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             font-style: italic;
-        }
-        .link{
-            background: linear-gradient(to right,#ffdcdcfb, #f73572a6);
-            background-color: #ffdcdcfb;
-            margin-left:300px;
-            margin-right:300px;
-            margin-top:100px;
-            margin-bottom:200px ;
-            border: 10px;
-            padding:10px;
-            border: 1px solid #ddd;
+            padding: 20px;
             border-radius: 10px;
-            text-align: left;
-}
-
-.link a:hover {
-    text-decoration: underline;
-
-</style>
-        
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .quadro {
+            background-color: #ffffff;
+            width: 200px; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .quadro:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .quadro a {
+            text-decoration: none;
+            color: #f53eaf;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .quadro a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
+
     <div class="nome">
-    <h1>§ Luana Maria de Oliveira Costa §</h1>
+        <h1>§ Luana Maria de Oliveira Costa §</h1>
     </div> 
-    
-    <div class="link">
-        <a href="01" target="_blank"># Atividade_01 #</a> § Links § <br>
-        <hr>
-        <a href="02" target="_blank"># Atividade_02 #</a> § Mais Tags HTML § <br>
-        <hr>
-        <a href="03" target="_blank"># Atividade_03 #</a> <br>
-        <hr>
-        <a href="04" target="_blank"># Atividade_04 #</a> <br>
-        <hr>
-        <a href="9" target="_blank"># Atividade_09 #</a> § Posicionamento § <br>
-        <hr>
-        <a href="10" target="_blank"># Atividade_10 #</a> § Formatação de link, tags nav, header & footer § <br>
-        <hr>
-        <a href="11" target="_blank"># Atividade_11 #</a> § <br>
-        <hr>
-        <a href="12" target="_blank"># Atividade_12 #</a> § Atributo de Data § <br>
-        <hr>
-        <a href="13" target="_blank"># Atividade_13 #</a> § Introdução ao CSS3 § <br>
-        <hr>
-        <a href="14" target="_blank"># Atividade_14 #</a> § Transparências, Sombras & Gradientes § <br>
-        <hr>
-        <a href="15" target="_blank"># Atividade_15 #</a> § <br>
-        <hr>
-        <a href="projeto_2" target="_blank"># Projeto_2 #</a> § <br>
+    <div class="container">
+        <div class="quadro">
+            <a href="01" target="_blank"># Atividade_01 #</a> <br> § Links §
+        </div>
+        <div class="quadro">
+            <a href="02" target="_blank"># Atividade_02 #</a> <br> § Mais Tags HTML §
+        </div>
+        <div class="quadro">
+            <a href="03" target="_blank"># Atividade_03 #</a> <br> 
+        </div>
+        <div class="quadro">
+            <a href="04" target="_blank"># Atividade_04 #</a> <br>
+        </div>
+        <div class="quadro">
+            <a href="09" target="_blank"># Atividade_09 #</a> <br> § Posicionamento §
+        </div>
+        <div class="quadro">
+            <a href="10" target="_blank"># Atividade_10 #</a> <br> § Formatação de link, tags nav, header & footer §
+        </div>
+        <div class="quadro">
+            <a href="11" target="_blank"># Atividade_11 #</a> <br>
+        </div>
+        <div class="quadro">
+            <a href="12" target="_blank"># Atividade_12 #</a> <br> § Atributo de Data §
+        </div>
+        <div class="quadro">
+            <a href="13" target="_blank"># Atividade_13 #</a> <br> § Introdução ao CSS3 §
+        </div>
+        <div class="quadro">
+            <a href="14" target="_blank"># Atividade_14 #</a> <br> § Transparências, Sombras & Gradientes §
+        </div>
+        <div class="quadro">
+            <a href="15" target="_blank"># Atividade_15 #</a> <br>
+        </div>
+        <div class="quadro">
+            <a href="projeto_2" target="_blank"># Projeto_2 #</a> <br>
+        </div>
     </div>
 
-
-    
-
 </body>
-
 </html>
