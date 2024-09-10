@@ -3,6 +3,7 @@
       padding: 10px;
       border-bottom: 2px solid #ccc;
       font-size: 18px;
+      border-style: inset;
     }
     
     #conteudo{
@@ -19,6 +20,8 @@
       text-align: center;
       border-top: 2px solid #ccc;
       margin-top: 10px;
+     border-style: outset;
+
     }
 
     .copy{
