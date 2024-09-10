@@ -1,0 +1,32 @@
+ #menu{ 
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      font-size: 18px;
+    }
+    
+    #conteudo{
+      background-color: #fff;
+      min-height: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    #rodape{
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+      border-top: 2px solid #ccc;
+      margin-top: 10px;
+    }
+
+    .copy{
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    p.double {
+      border-style: double;
+    }
+    
