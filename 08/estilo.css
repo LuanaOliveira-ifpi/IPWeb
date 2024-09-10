@@ -3,12 +3,10 @@ body{
 
  }
  .container{
-    display: flex;
     clear: both;b
     padding: 10px;
  }
  .imagem{
-    float: right;
     width: 200px;
     padding: 10px;
  }
