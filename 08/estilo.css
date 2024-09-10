@@ -2,11 +2,11 @@ body{
     background: #d6d6d6;
 
  }
- .container{
-    clear: both;b
-    padding: 10px;
- }
+  .container{
+    display: flex;
+  }
  .imagem{
+     float:left;
     width: 200px;
     padding: 10px;
  }
@@ -20,4 +20,7 @@ body{
     padding: 5px;
     margin: 10px;
     float: left;
+}
+.noticia p{
+    clear: both;
 }
