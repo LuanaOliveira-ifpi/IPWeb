@@ -1,1 +1,48 @@
 
+ .conteiner {
+      clear: both;
+      width: 150px;
+      height: 140px;
+      float: left;
+    }
+
+
+.box{
+            width: 200px;
+            height: 200px;
+            float: left;
+            padding: 10px;
+            
+        }
+        .box1{
+          background: red; 
+          border-radius: 100px 190px 5px 190px;
+        }
+        .box2{
+            background: orange; 
+          border-radius: 190px 100px 190px 5px;
+        }
+        .box3{
+          background: red;
+          border-radius: 200px 5px 5px 5px;
+        }
+        .box4{
+           background: orange; 
+          border-radius: 5px 200px 5px 5px;
+        }
+        .box5{
+            background: green; 
+          border-radius: 190px 5px 190px 100px;
+        }
+        .box6{
+           background: purple;
+          border-radius: 5px 190px 100px 190px;
+        }
+        .box7{
+           background: green; 
+          border-radius: 5px 5px 5px 200px;
+        }
+        .box8{
+            background: green;
+          border-radius: 5px 5px 5px 200px;
+        }
