@@ -1,10 +1,14 @@
 body {
     background: #d6d6d6;
+    margin: 0; 
+    padding: 0; 
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    gap: 10px; 
+    padding: 10px; 
 }
 
 .imagem {
@@ -21,10 +25,8 @@ body {
     text-align: center;
     font-size: 16px;
     padding: 5px;
-    margin: 10px;
-    box-sizing: border-box; 
-}
-
-.noticia p {
     margin: 0; 
+    box-sizing: border-box; 
+    flex: 1; 
+    min-width: 200px; 
 }
