@@ -13,15 +13,15 @@ function toggleElements(selector, elementType, show) {
 
 
     if (show) {
-        $elements.fadeIn('slow');  // Usando fadeIn para uma transição suave
+        $elements.fadeIn('slow');  
     } else {
-        $elements.fadeOut('slow'); // Usando fadeOut para uma transição suave
+        $elements.fadeOut('slow'); 
     }
 }
 
 
 $(document).ready(function() {
-    // Manipulador de clique para caixas com a classe 'box1'
+  
     $('.box1').click(function() {
         alert('Clique detectado!');
     });
