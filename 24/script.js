@@ -1,38 +1,37 @@
 
-function toggleElements(selector, elementType, show) {
+function toggleElements(selector, type, shouldShow) {
     let $elements;
-    
 
-    if (elementType === 'tag') {
+
+    if (type === 'tag') {
         $elements = $(selector);
-    } else if (elementType === 'class') {
+    } else if (type === 'class') {
         $elements = $('.' + selector);
-    } else if (elementType === 'id') {
+    } else if (type === 'id') {
         $elements = $('#' + selector);
     }
 
-
-    if (show) {
-        $elements.fadeIn('slow');  
+  
+    if (shouldShow) {
+        $elements.fadeIn('slow');
     } else {
-        $elements.fadeOut('slow'); 
+        $elements.fadeOut('slow');
     }
 }
 
-
 $(document).ready(function() {
-  
-    $('.box1').click(function() {
-        alert('Clique detectado!');
+
+    $('.clickable-item').click(function() {
+        alert('Você clicou no elemento!');
     });
 
   
-    $('.box2').dblclick(function() {
-        alert('Clique duplo detectado!');
+    $('.dblclick-item').dblclick(function() {
+        alert('Você deu um duplo clique no elemento!');
     });
 
  
-    $('.box3').mouseover(function() {
-        alert('Mouse sobre o elemento!');
+    $('.mouseover-item').mouseover(function() {
+        alert('O mouse está sobre o elemento!');
     });
 });
