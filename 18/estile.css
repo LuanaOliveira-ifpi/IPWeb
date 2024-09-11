@@ -1,0 +1,35 @@
+
+        body {
+            background-color: #f73572a6;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            padding: 60px;
+        }
+
+        .card {
+            background: #ffdcdcfb;
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 35px;
+            padding: 5px;
+            margin: 10px;
+            display: inline-block;
+            width: 50%; 
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 35px;
+            color: #f73572a6;
+        }
