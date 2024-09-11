@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Atividade 24 </title>
+    <title>Exemplo JQuery</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo.css">
 </head>
@@ -34,8 +34,8 @@
             </div>
 
             <div class="col-md-4">
-                <div style="height: 100px; width: 100px; background:#007bff;" class="box d-inline-block mx-1"></div>
-                <div style="height: 100px; width: 100px; background:#28a745;" class="box d-inline-block mx-1"></div>
+                <div style="height: 100px; width: 100px; background:#007bff;" class="box1 d-inline-block mx-1"></div>
+                <div style="height: 100px; width: 100px; background:#28a745;" class="box2 d-inline-block mx-1"></div>
             </div>
 
             <div class="col-md-4">
@@ -48,20 +48,20 @@
 
         <div class="row">
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleVisibility('p', 'tag', false)">Esconder parágrafos</button>
-                <button type="button" class="btn btn-success" onclick="toggleVisibility('p', 'tag', true)">Exibir parágrafos</button>
+                <button type="button" class="btn btn-danger" onclick="toggleElements('p', 'tag', false)">Esconder parágrafos</button>
+                <button type="button" class="btn btn-success" onclick="toggleElements('p', 'tag', true)">Exibir parágrafos</button>
             </div>
 
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleVisibility('box', 'class', false)">Esconder divs</button>
-                <button type="button" class="btn btn-success" onclick="toggleVisibility('box', 'class', true)">Exibir divs</button>
+                <button type="button" class="btn btn-danger" onclick="toggleElements('box1', 'class', false)">Esconder divs</button>
+                <button type="button" class="btn btn-success" onclick="toggleElements('box1', 'class', true)">Exibir divs</button>
             </div>
 
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleVisibility('field1', 'id', false)">Esconder input ID 1</button>
-                <button type="button" class="btn btn-danger" onclick="toggleVisibility('field2', 'id', false)">Esconder input ID 2</button>
-                <button type="button" class="btn btn-success mt-2" onclick="toggleVisibility('field1', 'id', true)">Exibir input ID 1</button>
-                <button type="button" class="btn btn-success mt-2" onclick="toggleVisibility('field2', 'id', true)">Exibir input ID 2</button>
+                <button type="button" class="btn btn-danger" onclick="toggleElements('field1', 'id', false)">Esconder input ID 1</button>
+                <button type="button" class="btn btn-danger" onclick="toggleElements('field2', 'id', false)">Esconder input ID 2</button>
+                <button type="button" class="btn btn-success mt-2" onclick="toggleElements('field1', 'id', true)">Exibir input ID 1</button>
+                <button type="button" class="btn btn-success mt-2" onclick="toggleElements('field2', 'id', true)">Exibir input ID 2</button>
             </div>
         </div>   
     </div>
