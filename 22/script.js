@@ -1,3 +1,4 @@
+// Função para contar de 1 até um número n
 function escreverNumeros() {
     let n = parseInt(prompt("Digite um número:"));
     let div = document.getElementById("resultado");
@@ -5,23 +6,24 @@ function escreverNumeros() {
 
     if (!isNaN(n) && n > 0) {
         for (let i = 1; i <= n; i++) {
-            div.innerHTML += i + "<br>"; 
+            div.innerHTML += i + "<br>";
         }
     } else {
         div.innerHTML = "Por favor, insira um número válido!";
     }
 }
 
-
+// Função para calcular a raiz quadrada e mostrar um alerta
 function calcularRaiz(numero) {
     if (!isNaN(numero) && numero >= 0) {
         let raiz = Math.sqrt(numero);
-        alert(A raiz quadrada de ${numero} é ${raiz});
+        alert(`A raiz quadrada de ${numero} é ${raiz}`);
     } else {
         alert("Número inválido.");
     }
 }
 
+// Função para exibir texto em um modal
 function mostrarModal() {
     let texto = prompt("Digite o texto para o modal:");
 
