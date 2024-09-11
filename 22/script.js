@@ -1,4 +1,4 @@
-// Função para contar de 1 até um número n
+
 function escreverNumeros() {
     let n = parseInt(prompt("Digite um número:"));
     let div = document.getElementById("resultado");
@@ -13,7 +13,7 @@ function escreverNumeros() {
     }
 }
 
-// Função para calcular a raiz quadrada e mostrar um alerta
+
 function calcularRaiz(numero) {
     if (!isNaN(numero) && numero >= 0) {
         let raiz = Math.sqrt(numero);
@@ -23,7 +23,7 @@ function calcularRaiz(numero) {
     }
 }
 
-// Função para exibir texto em um modal
+
 function mostrarModal() {
     let texto = prompt("Digite o texto para o modal:");
 
