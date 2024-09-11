@@ -1,7 +1,8 @@
 
-function toggleElements(selector, elementType, isVisible) {
+function toggleElements(selector, elementType, show) {
     let $elements;
     
+
     if (elementType === 'tag') {
         $elements = $(selector);
     } else if (elementType === 'class') {
@@ -9,24 +10,29 @@ function toggleElements(selector, elementType, isVisible) {
     } else if (elementType === 'id') {
         $elements = $('#' + selector);
     }
-    
-    if (isVisible) {
-        $elements.slideDown('slow'); // Alterado para slideDown para um efeito diferente
+
+
+    if (show) {
+        $elements.fadeIn('slow');  // Usando fadeIn para uma transição suave
     } else {
-        $elements.slideUp('slow');   // Alterado para slideUp para um efeito diferente
+        $elements.fadeOut('slow'); // Usando fadeOut para uma transição suave
     }
 }
 
+
 $(document).ready(function() {
-    $('.box1').on('click', function() {
+    // Manipulador de clique para caixas com a classe 'box1'
+    $('.box1').click(function() {
         alert('Clique detectado!');
     });
 
-    $('.box2').on('dblclick', function() {
+  
+    $('.box2').dblclick(function() {
         alert('Clique duplo detectado!');
     });
 
-    $('.box3').on('mouseover', function() {
+ 
+    $('.box3').mouseover(function() {
         alert('Mouse sobre o elemento!');
     });
 });
