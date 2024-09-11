@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atividade 24</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="text-center mb-4 bg-light p-3">
+            <h1>Selecionando Elementos com jQuery</h1>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Parágrafos</h5>
+            </div>
+            <div class="col-md-4">
+                <h5>Divisões</h5>
+            </div>
+            <div class="col-md-4">
+                <h5>Campos</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p class="bg-primary text-white p-2">Este é um parágrafo</p>
+                <p class="bg-success text-white p-2">Este é outro parágrafo</p>
+            </div>
+
+            <div class="col-md-4">
+                <div style="height: 100px; width: 100px; background:#007bff;" class="d-inline-block mx-1"></div>
+                <div style="height: 100px; width: 100px; background:#28a745;" class="d-inline-block mx-1"></div>
+            </div>
+
+            <div class="col-md-4">
+                <input id="field1" type="text" placeholder="Campo ID 01" class="form-control mb-2" />
+                <input id="field2" type="text" placeholder="Campo ID 02" class="form-control" />
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" onclick="toggleVisibility('p', 'tag', false)">Esconder parágrafos</button>
+                <button type="button" class="btn btn-success" onclick="toggleVisibility('p', 'tag', true)">Exibir parágrafos</button>
+            </div>
+
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" onclick="toggleVisibility('box', 'class', false)">Esconder divs</button>
+                <button type="button" class="btn btn-success" onclick="toggleVisibility('box', 'class', true)">Exibir divs</button>
+            </div>
+
+            <div class="col-md-4">
+                <button type="button" class="btn btn-danger" onclick="toggleVisibility('field1', 'id', false)">Esconder input ID 1</button>
+                <button type="button" class="btn btn-danger" onclick="toggleVisibility('field2', 'id', false)">Esconder input ID 2</button>
+                <button type="button" class="btn btn-success mt-2" onclick="toggleVisibility('field1', 'id', true)">Exibir input ID 1</button>
+                <button type="button" class="btn btn-success mt-2" onclick="toggleVisibility('field2', 'id', true)">Exibir input ID 2</button>
+            </div>
+        </div>   
+    </div>
+    
+    <div class="container mt-4">
+        <div class="text-center mb-4 bg-light p-3">
+            <h1>Eventos com jQuery</h1>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4">
+                <div style="height: 100px; width: 150px; background:#007bff;" class="event-box text-center text-white d-inline-block mx-1">Clique</div>
+                <div style="height: 100px; width: 150px; background:#28a745;" class="event-box text-center text-white d-inline-block mx-1">Clique</div>
+            </div>
+
+            <div class="col-md-4">
+                <div style="height: 100px; width: 150px; background:#007bff;" class="event-box-double-click text-center text-white d-inline-block mx-1">Doble Click</div>
+                <div style="height: 100px; width: 150px; background:#28a745;" class="event-box-double-click text-center text-white d-inline-block mx-1">Doble Click</div>
+            </div>
+
+            <div class="col-md-4">
+                <div style="height: 100px; width: 150px; background:#dc3545;" class="event-box-mouseover text-center text-white d-inline-block mx-1">Mouseover</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7HUi+bX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
 
