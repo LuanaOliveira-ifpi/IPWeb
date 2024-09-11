@@ -1,20 +1,32 @@
 
-function toggleVisibility(identifier, type, show) {
-    let elements;
+function toggleElements(selector, elementType, isVisible) {
+    let $elements;
     
-    if (type === 'tag') {
-        elements = document.getElementsByTagName(identifier);
-    } else if (type === 'class') {
-        elements = document.getElementsByClassName(identifier);
-    } else if (type === 'id') {
-        elements = [document.getElementById(identifier)];
+    if (elementType === 'tag') {
+        $elements = $(selector);
+    } else if (elementType === 'class') {
+        $elements = $('.' + selector);
+    } else if (elementType === 'id') {
+        $elements = $('#' + selector);
     }
     
-    for (let element of elements) {
-        if (show) {
-            element.style.display = 'block';
-        } else {
-            element.style.display = 'none';
-        }
+    if (isVisible) {
+        $elements.slideDown('slow'); // Alterado para slideDown para um efeito diferente
+    } else {
+        $elements.slideUp('slow');   // Alterado para slideUp para um efeito diferente
     }
 }
+
+$(document).ready(function() {
+    $('.box1').on('click', function() {
+        alert('Clique detectado!');
+    });
+
+    $('.box2').on('dblclick', function() {
+        alert('Clique duplo detectado!');
+    });
+
+    $('.box3').on('mouseover', function() {
+        alert('Mouse sobre o elemento!');
+    });
+});
