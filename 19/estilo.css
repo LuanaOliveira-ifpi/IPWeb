@@ -32,3 +32,15 @@
             font-size: 35px;
             color: #f73572a6;
         }
+ .btn-default {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            color: #212529;
+        }
+        .btn-default:hover {
+            background-color: #e2e6ea;
+            color: #212529;
+        }
+        .btn-custom {
+            border-radius: 0.25rem; /* Ajuste o valor conforme necessário */
+        }
