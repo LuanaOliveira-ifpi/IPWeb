@@ -1,108 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>jQuery Exemplo</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulação de Elementos com jQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
-        .header {
-            padding: 20px;
-            border-radius: 5px;
-            background-color: #f8f9fa;
+        .box {
+            height: 200px;
+            width: 200px;
         }
-        .text-primary { background-color: #007bff; color: #fff; padding: 10px; border-radius: 5px; }
-        .text-success { background-color: #28a745; color: #fff; padding: 10px; border-radius: 5px; }
-        .block-item { border-radius: 10px; margin: 10px; }
-        .clickable-item { cursor: pointer; border-radius: 10px; color: #fff; text-align: center; line-height: 100px; }
-        .dblclick-item { cursor: pointer; border-radius: 10px; color: #fff; text-align: center; line-height: 100px; }
-        .mouseover-item { cursor: pointer; border-radius: 10px; color: #fff; text-align: center; line-height: 100px; }
+        .float-start {
+            float: left;
+            margin-right: 15px;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header text-center mt-4">
-            <h1>Manipulação de Elementos com jQuery</h1>
-        </div>
-
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center">Manipulação de Elementos com jQuery</h1>
         <hr />
 
         <div class="row">
             <div class="col-md-4">
-                <h4>Textos</h4>
+                <h4>Parágrafos</h4>
+                <p class="bg-primary" id="paragrafo1">Este é um parágrafo</p>
+                <p class="bg-success" id="paragrafo2">Este é outro parágrafo</p>
             </div>
             <div class="col-md-4">
-                <h4>Blocos</h4>
+                <h4>Divisões</h4>
+                <div style="height: 100px; width: 100px; background: #428bca" class="float-start" id="div1"></div>
+                <div style="height: 100px; width: 100px; background: #5cb85c" class="float-start" id="div2"></div>
             </div>
             <div class="col-md-4">
                 <h4>Campos</h4>
+                <input id="campo1" type="text" placeholder="input ID 01" class="form-control" />
+                <input id="campo2" type="text" placeholder="input ID 02" class="form-control" />
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <p class="text-primary">Texto 1</p>
-                <p class="text-success">Texto 2</p>
-            </div>
-
-            <div class="col-md-4">
-                <div style="height: 100px; width: 100px; background:#007bff;" class="block-item float-left"></div>
-                <div style="height: 100px; width: 100px; background:#28a745; margin-left:15px" class="block-item float-left"></div>
-            </div>
-
-            <div class="col-md-4">
-                <input id="inputField1" type="text" placeholder="Campo 1" class="form-control mt-3" />
-                <input id="inputField2" type="text" placeholder="Campo 2" class="form-control mt-3" />
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleElements('p', 'tag', false)">Ocultar Textos</button>
-                <button type="button" class="btn btn-success" onclick="toggleElements('p', 'tag', true)">Mostrar Textos</button>
-            </div>
-
-            <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleElements('block-item', 'class', false)">Ocultar Blocos</button>
-                <button type="button" class="btn btn-success" onclick="toggleElements('block-item', 'class', true)">Mostrar Blocos</button>
-            </div>
-
-            <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleElements('inputField1', 'id', false)">Ocultar Campo 1</button>
-                <button type="button" class="btn btn-danger" onclick="toggleElements('inputField2', 'id', false)">Ocultar Campo 2</button>
-                <button type="button" class="btn btn-success mt-3" onclick="toggleElements('inputField1', 'id', true)">Mostrar Campo 1</button>
-                <button type="button" class="btn btn-success mt-3" onclick="toggleElements('inputField2', 'id', true)">Mostrar Campo 2</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="header text-center mt-4">
-            <h1>Eventos com jQuery</h1>
         </div>
 
         <hr />
 
         <div class="row">
             <div class="col-md-4">
-                <div style="height: 100px; width: 150px; background:#007bff;" class="clickable-item float-left">Clique Aqui</div>
-                <div style="height: 100px; width: 150px; background:#28a745; margin-left:15px" class="clickable-item float-left">Clique Aqui</div>
+                <button type="button" class="btn btn-danger" onclick="toggleElements('p', false)">Esconder parágrafos</button>
+                <button type="button" class="btn btn-success" onclick="toggleElements('p', true)">Exibir parágrafos</button>
             </div>
-
             <div class="col-md-4">
-                <div style="height: 100px; width: 150px; background:#007bff;" class="dblclick-item float-left">Duplo Clique</div>
-                <div style="height: 100px; width: 150px; background:#28a745; margin-left:15px" class="dblclick-item float-left">Duplo Clique</div>
+                <button type="button" class="btn btn-danger" onclick="toggleDivs(false)">Esconder divs</button>
+                <button type="button" class="btn btn-success" onclick="toggleDivs(true)">Exibir divs</button>
             </div>
-
             <div class="col-md-4">
-                <div style="height: 100px; width: 150px; background:#dc3545;" class="mouseover-item float-left">Mouseover</div>
+                <button type="button" class="btn btn-danger" onclick="toggleElementById('campo1', false)">Esconder input ID 1</button>
+                <button type="button" class="btn btn-danger" onclick="toggleElementById('campo2', false)">Esconder input ID 2</button>
+                <button type="button" class="btn btn-success" onclick="toggleElementById('campo1', true)">Exibir input ID 1</button>
+                <button type="button" class="btn btn-success" onclick="toggleElementById('campo2', true)">Exibir input ID 2</button>
+            </div>
+        </div>
+
+        <div class="row justify-content-between mt-4 g-3">
+            <div class="col-auto">
+                <div class="box bg-white border rounded d-flex align-items-center justify-content-center" id="toggleElementBox">
+                    <p class="text-center">Caixa 1</p>
+                </div>
+                <button id="toggleElement" class="btn btn-dark mt-2 w-100">Esconder/Mostrar</button>
+            </div>
+            <div class="col-auto">
+                <div class="box bg-info border rounded d-flex align-items-center justify-content-center" id="colorChangeBox">
+                    <p class="text-center">Caixa 2</p>
+                </div>
+                <button id="colorChange" class="btn btn-dark mt-2 w-100">Alterar Cor</button>
+            </div>
+            <div class="col-auto">
+                <div class="box bg-secondary border rounded d-flex align-items-center justify-content-center" id="clickBox">
+                    <p class="text-center">Caixa 3</p>
+                </div>
+                <button id="clickSimple" class="btn btn-dark mt-2 w-100">Clique Simples</button>
+            </div>
+            <div class="col-auto">
+                <div class="box bg-success border rounded d-flex align-items-center justify-content-center" id="doubleClickBox">
+                    <p class="text-center">Caixa 4</p>
+                </div>
+                <button id="doubleClick" class="btn btn-dark mt-2 w-100">Clique Duplo</button>
+            </div>
+            <div class="col-auto">
+                <div class="box bg-warning border rounded d-flex align-items-center justify-content-center" id="hoverBox">
+                    <p class="text-center">Passe o mouse</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7HUi+bX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function toggleElements(tag, flag) {
+            if (flag) $(tag).fadeIn('slow');
+            else $(tag).fadeOut('slow');
+        }
+
+        function toggleDivs(flag) {
+            if (flag) $("#div1, #div2").fadeIn('slow');
+            else $("#div1, #div2").fadeOut('slow');
+        }
+
+        function toggleElementById(id, flag) {
+            if (flag) $("#" + id).fadeIn('slow');
+            else $("#" + id).fadeOut('slow');
+        }
+
+        $("#toggleElement").click(function () {
+            $("#toggleElementBox").toggle("slow");
+        });
+
+        $("#colorChange").click(function () {
+            $("#colorChangeBox").toggleClass("bg-info bg-danger");
+        });
+
+        $("#clickSimple").click(function () {
+            $("#clickBox").text("Clique detectado!");
+        });
+
+        $("#doubleClick").dblclick(function () {
+            $("#doubleClickBox").text("Duplo Clique Detectado!");
+        });
+
+        $("#hoverBox").hover(
+            function () {
+                $(this).find("p").text("Você está sobre a caixa!");
+            },
+            function () {
+                $(this).find("p").text("Passe o mouse");
+            }
+        );
+    </script>
 </body>
 </html>
