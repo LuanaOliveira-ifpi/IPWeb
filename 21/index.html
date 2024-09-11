@@ -6,71 +6,87 @@
     <title>Atividade 21</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      .tooltip-inner {
+        text-align: center;
+      }
+      .popover-body {
+        text-align: center;
+      }
+      .btn-extra-space {
+        margin-right: 10px;
+      }
+    </style>
   </head>
-  <div class="container">
-      <br>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-        </div>
-    <div class="alert alert-info">
-			  <strong>Info!</strong> Indicates a neutral informative change or action.
-		</div>
-<div class="alert alert-warning">
-			  <strong>Warning!</strong> Indicates a warning that might need attention.
-		</div>
-		<div class="alert alert-danger">
-			  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-		</div>   
-  </div>
-  <div class="container">
-             <h3>Tooltip</h3> 
-              <button type="button" class="btn btn-primary"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Detalhes do item"> Dica </button>
-    
-     <div class="row mt-4">
-                <div>
-                    <button class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Play"><i class="fa-solid fa-play"></i></button>
-                    <button class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Pause"><i class="fa-solid fa-pause"></i></button>
-                    <button class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Stop"><i class="fa-solid fa-stop"></i></button>
-                 </div>   
-            </div>
+  <body>
     <div class="container">
-          <h3>Popover</h3> 
-           <button type="button" 
-           class="btn btn-lg btn-danger" 
-           data-toggle="popover" 
-           title="Detalhes!!" 
-           data-content="Breve detalhes aqui"
-           data-placement="right"
-           data-trigger="focus"
-           > Detalhes </button>
-     </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
+      <br>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="alert alert-info">
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+      </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Indicates a warning that might need attention.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+      </div>   
+    </div>
+    
+    <div class="container">
+      <h3>Tooltip</h3> 
+      <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Detalhes do item">Dica</button>
+    
+      <div class="row mt-4">
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-secondary btn-extra-space" data-toggle="tooltip" data-placement="right" title="Play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button class="btn btn-secondary btn-extra-space" data-toggle="tooltip" data-placement="right" title="Pause">
+            <i class="fa-solid fa-pause"></i>
+          </button>
+          <button class="btn btn-secondary btn-extra-space" data-toggle="tooltip" data-placement="right" title="Stop">
+            <i class="fa-solid fa-stop"></i>
+          </button>
+          <button class="btn btn-secondary btn-extra-space" data-toggle="tooltip" data-placement="right" title="Close">
+            <i class="fa-solid fa-xmark"></i> 
+          </button>
+        </div>   
+      </div>
+    </div>
+    
+    <div class="container">
+      <h3>Popover</h3> 
+      <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Detalhes!!" data-content="Breve detalhes aqui" data-placement="right" data-trigger="focus">Detalhes</button>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
       $(document).ready(function () {
         $(".alert .btn-close").on("click", function () {
-          $(this).closest(".alert") .fadeOut(500, function () {
-              $(this).remove();
-            });
+          $(this).closest(".alert").fadeOut(500, function () {
+            $(this).remove();
+          });
         });
       });
     </script>
-    <script type="text/javaScript">
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl){
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
 
-      var popoverTriggerList=[].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
-      var popoverList=popoverTriggerList.map(function(popoverTriggerEl){
-          return new bootstrap.Popover(popoverTriggerEl)
-      })
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
+      var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
     </script>
   </body>
 </html>
-
