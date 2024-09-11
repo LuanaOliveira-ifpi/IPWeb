@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto03 - ViaCEP</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4b55daf142.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h2 class="mb-4 text-center">Consulta de CEP</h2>
+            <form>
+              <div class="mb-3">
+                <label for="cep" class="form-label">Digite o CEP:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cep"
+                  placeholder="Ex: 64000001"
+                  maxlength="8"
+                />
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="button" id="consultar" class="btn btn-dark">
+                  Consultar
+                 </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
