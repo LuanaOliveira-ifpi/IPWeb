@@ -1,96 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manipulação de Elementos com jQuery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de jQuery com Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Estilos gerais */
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            padding: 2rem;
-        }
-
-        /* Estilos para as caixas */
         .box {
-            height: 150px;
+            height: 100px;
             width: 150px;
-            border: 2px solid #ddd;
-            border-radius: 0.5rem;
+            background: #428bca;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
         }
-
-        /* Estilos específicos para as caixas */
-        #toggleElementBox {
-            background-color: #ffffff;
-            border-color: #ced4da;
+        .float-start {
+            float: left;
+            margin-right: 15px;
         }
-
-        #colorChangeBox {
-            background-color: #17a2b8;
-            border-color: #17a2b8;
+        .caixa {
+            height: 100px;
+            width: 100px;
+            background: #428bca;
+            display: inline-block;
+            margin-right: 15px;
         }
-
-        #clickBox {
-            background-color: #6c757d;
-            border-color: #6c757d;
+        .float-left {
+            float: left;
         }
-
-        #doubleClickBox {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-
-        #hoverBox {
-            background-color: #ffc107;
-            border-color: #ffc107;
-        }
-
-        /* Estilos dos botões */
-        .btn-dark {
-            background-color: #343a40;
-            border-color: #343a40;
-        }
-
-        /* Estilos dos parágrafos */
-        .bg-primary {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-
-        .bg-success {
-            background-color: #28a745;
-            color: #ffffff;
+        .text-center {
+            text-align: center;
         }
     </style>
 </head>
 <body class="bg-light">
     <div class="container mt-5">
-        <h1 class="text-center">Manipulação de Elementos com jQuery</h1>
+        <div class="title bg-light text-center">
+            <h1>SELECIONANDO ELEMENTOS COM JQUERY</h1>
+        </div>
+
         <hr />
 
         <div class="row">
             <div class="col-md-4">
                 <h4>Parágrafos</h4>
-                <p class="bg-primary text-white p-2" id="paragrafo1">Este é um parágrafo</p>
-                <p class="bg-success text-white p-2" id="paragrafo2">Este é outro parágrafo</p>
+                <p class="bg-primary" id="paragrafo1">Este é um parágrafo</p>
+                <p class="bg-success" id="paragrafo2">Este é outro parágrafo</p>
             </div>
             <div class="col-md-4">
                 <h4>Divisões</h4>
-                <div class="float-start" id="div1"></div>
-                <div class="float-start" id="div2"></div>
+                <div class="caixa float-left" id="div1"></div>
+                <div class="caixa float-left" id="div2"></div>
             </div>
             <div class="col-md-4">
                 <h4>Campos</h4>
-                <input id="campo1" type="text" placeholder="input ID 01" class="form-control" />
-                <input id="campo2" type="text" placeholder="input ID 02" class="form-control" />
+                <input id="campo1" type="text" placeholder="input ID 01" class="form-control mt-3" />
+                <input id="campo2" type="text" placeholder="input ID 02" class="form-control mt-3" />
             </div>
         </div>
 
@@ -98,49 +64,37 @@
 
         <div class="row">
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleElements('p', false)">Esconder parágrafos</button>
-                <button type="button" class="btn btn-success" onclick="toggleElements('p', true)">Exibir parágrafos</button>
+                <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('p', 'tag', false)">Esconder parágrafos</button>
+                <button type="button" class="btn btn-success" onclick="exibirOcultarGenerica('p', 'tag', true)">Exibir parágrafos</button>
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleDivs(false)">Esconder divs</button>
-                <button type="button" class="btn btn-success" onclick="toggleDivs(true)">Exibir divs</button>
+                <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('caixa', 'classe', false)">Esconder divs</button>
+                <button type="button" class="btn btn-success" onclick="exibirOcultarGenerica('caixa', 'classe', true)">Exibir divs</button>
             </div>
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="toggleElementById('campo1', false)">Esconder input ID 1</button>
-                <button type="button" class="btn btn-danger" onclick="toggleElementById('campo2', false)">Esconder input ID 2</button>
-                <button type="button" class="btn btn-success" onclick="toggleElementById('campo1', true)">Exibir input ID 1</button>
-                <button type="button" class="btn btn-success" onclick="toggleElementById('campo2', true)">Exibir input ID 2</button>
+                <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('campo1', 'id', false)">Esconder input ID 1</button>
+                <button type="button" class="btn btn-danger" onclick="exibirOcultarGenerica('campo2', 'id', false)">Esconder input ID 2</button>
+                <button type="button" class="btn btn-success mt-3" onclick="exibirOcultarGenerica('campo1', 'id', true)">Exibir input ID 1</button>
+                <button type="button" class="btn btn-success mt-3" onclick="exibirOcultarGenerica('campo2', 'id', true)">Exibir input ID 2</button>
             </div>
-        </div>
+        </div>   
 
-        <div class="row justify-content-between mt-4 g-3">
-            <div class="col-auto">
-                <div class="box" id="toggleElementBox">
-                    <p class="text-center">Caixa 1</p>
-                </div>
-                <button id="toggleElement" class="btn btn-dark mt-2 w-100">Esconder/Mostrar</button>
+        <div class="container mt-5">
+            <div class="title bg-light text-center">
+                <h1>EVENTOS COM JQUERY</h1>
             </div>
-            <div class="col-auto">
-                <div class="box" id="colorChangeBox">
-                    <p class="text-center">Caixa 2</p>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box bg-primary" id="clickBox">Evento Click</div>
+                    <div class="box bg-success" id="clickBox2">Evento Click</div>
                 </div>
-                <button id="colorChange" class="btn btn-dark mt-2 w-100">Alterar Cor</button>
-            </div>
-            <div class="col-auto">
-                <div class="box" id="clickBox">
-                    <p class="text-center">Caixa 3</p>
+                <div class="col-md-4">
+                    <div class="box bg-primary" id="doubleClickBox">Evento Double Click</div>
+                    <div class="box bg-success" id="doubleClickBox2">Evento Double Click</div>
                 </div>
-                <button id="clickSimple" class="btn btn-dark mt-2 w-100">Clique Simples</button>
-            </div>
-            <div class="col-auto">
-                <div class="box" id="doubleClickBox">
-                    <p class="text-center">Caixa 4</p>
-                </div>
-                <button id="doubleClick" class="btn btn-dark mt-2 w-100">Clique Duplo</button>
-            </div>
-            <div class="col-auto">
-                <div class="box" id="hoverBox">
-                    <p class="text-center">Passe o mouse</p>
+                <div class="col-md-4">
+                    <div class="box bg-danger" id="hoverBox">Evento Mouseover</div>
                 </div>
             </div>
         </div>
@@ -149,44 +103,32 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script type="text/javascript">
-        function toggleElements(tag, flag) {
-            if (flag) $(tag).fadeIn('slow');
-            else $(tag).fadeOut('slow');
+        function exibirOcultarGenerica(selector, tipo, flag) {
+            if (tipo === 'tag') {
+                $(selector).toggle(flag);
+            } else if (tipo === 'classe') {
+                $('.' + selector).toggle(flag);
+            } else if (tipo === 'id') {
+                $('#' + selector).toggle(flag);
+            }
         }
 
-        function toggleDivs(flag) {
-            if (flag) $("#div1, #div2").fadeIn('slow');
-            else $("#div1, #div2").fadeOut('slow');
-        }
-
-        function toggleElementById(id, flag) {
-            if (flag) $("#" + id).fadeIn('slow');
-            else $("#" + id).fadeOut('slow');
-        }
-
-        $("#toggleElement").click(function () {
-            $("#toggleElementBox").toggle("slow");
+        $("#clickBox, #clickBox2").click(function () {
+            $(this).text("Clique detectado!");
         });
 
-        $("#colorChange").click(function () {
-            $("#colorChangeBox").toggleClass("bg-info bg-danger");
-        });
-
-        $("#clickSimple").click(function () {
-            $("#clickBox").text("Clique detectado!");
-        });
-
-        $("#doubleClick").dblclick(function () {
-            $("#doubleClickBox").text("Duplo Clique Detectado!");
+        $("#doubleClickBox, #doubleClickBox2").dblclick(function () {
+            $(this).text("Duplo Clique Detectado!");
         });
 
         $("#hoverBox").hover(
             function () {
-                $(this).find("p").text("Você está sobre a caixa!");
+                $(this).text("Você está sobre a caixa!");
             },
             function () {
-                $(this).find("p").text("Passe o mouse");
+                $(this).text("Evento Mouseover");
             }
         );
     </script>
