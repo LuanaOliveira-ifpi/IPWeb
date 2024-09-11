@@ -9,15 +9,12 @@
         .box {
             height: 100px;
             width: 150px;
-            background: #428bca;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        .float-start {
-            float: left;
-            margin-right: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
         }
         .caixa {
             height: 100px;
@@ -25,9 +22,7 @@
             background: #428bca;
             display: inline-block;
             margin-right: 15px;
-        }
-        .float-left {
-            float: left;
+            cursor: pointer;
         }
         .text-center {
             text-align: center;
@@ -45,21 +40,31 @@
         <div class="row">
             <div class="col-md-4">
                 <h4>Parágrafos</h4>
-                <p class="bg-primary" id="paragrafo1">Este é um parágrafo</p>
-                <p class="bg-success" id="paragrafo2">Este é outro parágrafo</p>
             </div>
             <div class="col-md-4">
                 <h4>Divisões</h4>
-                <div class="caixa float-left" id="div1"></div>
-                <div class="caixa float-left" id="div2"></div>
             </div>
             <div class="col-md-4">
                 <h4>Campos</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p class="bg-primary">Este é um parágrafo</p>
+                <p class="bg-success">Este é outro parágrafo</p>
+            </div>
+
+            <div class="col-md-4">
+                <div style="background:#428bca;" class="caixa"></div>
+                <div style="background:#5cb85c;" class="caixa"></div>
+            </div>
+
+            <div class="col-md-4">
                 <input id="campo1" type="text" placeholder="input ID 01" class="form-control mt-3" />
                 <input id="campo2" type="text" placeholder="input ID 02" class="form-control mt-3" />
             </div>
         </div>
-
         <hr />
 
         <div class="row">
@@ -83,18 +88,32 @@
             <div class="title bg-light text-center">
                 <h1>EVENTOS COM JQUERY</h1>
             </div>
-            <hr />
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="box bg-primary" id="clickBox">Evento Click</div>
-                    <div class="box bg-success" id="clickBox2">Evento Click</div>
+
+            <div class="row justify-content-between mt-4 g-3">
+                <div class="col-auto">
+                    <div class="box bg-white border rounded" id="elemento">
+                        <p class="text-center">Caixa 1</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="box bg-primary" id="doubleClickBox">Evento Double Click</div>
-                    <div class="box bg-success" id="doubleClickBox2">Evento Double Click</div>
+                <div class="col-auto">
+                    <div class="box bg-info border rounded" id="box">
+                        <p class="text-center">Caixa 2</p>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="box bg-danger" id="hoverBox">Evento Mouseover</div>
+                <div class="col-auto">
+                    <div class="box bg-secondary border rounded" id="clickBox">
+                        <p class="text-center">Caixa 3</p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="box bg-success border rounded" id="doubleClickMsg">
+                        <p class="text-center">Caixa 4</p>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="box bg-warning border rounded" id="hoverBox">
+                        <p class="text-center">Passe o mouse</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,6 +124,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script type="text/javascript">
+        // Função para esconder ou mostrar elementos genéricos
         function exibirOcultarGenerica(selector, tipo, flag) {
             if (tipo === 'tag') {
                 $(selector).toggle(flag);
@@ -115,20 +135,29 @@
             }
         }
 
-        $("#clickBox, #clickBox2").click(function () {
+        // Eventos das caixas
+        $("#elemento").click(function () {
+            $(this).toggle("slow");
+        });
+
+        $("#box").click(function () {
+            $(this).toggleClass("bg-info bg-danger");
+        });
+
+        $("#clickBox").click(function () {
             $(this).text("Clique detectado!");
         });
 
-        $("#doubleClickBox, #doubleClickBox2").dblclick(function () {
+        $("#doubleClickMsg").dblclick(function () {
             $(this).text("Duplo Clique Detectado!");
         });
 
         $("#hoverBox").hover(
             function () {
-                $(this).text("Você está sobre a caixa!");
+                $(this).find("p").text("Você está sobre a caixa!");
             },
             function () {
-                $(this).text("Evento Mouseover");
+                $(this).find("p").text("Passe o mouse");
             }
         );
     </script>
