@@ -11,13 +11,16 @@ body {
     font-size: 10px;
     font-family: 'Times New Roman', Times, serif;
 }
-
-header {
+header{
     background-color: #333;
     color: #fff;
-    padding: 1rem;
-    text-align: center;
+    padding: 10px 0;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
+
 
 header h1 {
     margin: 0;
