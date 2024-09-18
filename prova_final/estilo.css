@@ -1,14 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 #menu { 
-    background-color: #d5dbdb;
-    padding: 10px;
-    border-bottom: 2px dotted #302e2e; 
-    font-size: 18px;
+    background-color: #6782ce;
+    padding: 9px;
+    border-bottom: 2px double #302e2e;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header {
