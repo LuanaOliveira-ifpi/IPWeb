@@ -1,10 +1,11 @@
-const imagem = document.getElementById('imagem');
 
-        
-        window.addEventListener('scroll', () => {
-            
-            const scrollPosition = window.scrollY; 
-            const windowHeight = window.innerHeight; 
-            const newOpacity = 1 - scrollPosition / windowHeight;
-            imagem.style.opacity = Math.max(newOpacity, 0);
+document.querySelectorAll('.sub-menu a, .navbar-nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
+    });
+});
+
+
