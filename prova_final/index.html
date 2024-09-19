@@ -30,10 +30,61 @@
                         <li class="nav-item"><a class="nav-link" href="#Extensao">Extensão e Parcerias</a></li>
                         <li class="nav-item"><a class="nav-link" href="#Contato">Contato</a></li>
                     </ul>
+                    <!-- Botão Logar -->
+                    <button type="button" class="btn btn-dark ms-3" data-bs-toggle="modal" data-bs-target="#janela">Logar</button>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="janela" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content login">
+                <div class="modal-header">
+                    <h6 class="modal-title text-secondary text-center">Logar na minha conta</h6>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Usuário" aria-label="Email" aria-describedby="icone-email" />
+                            <span class="input-group-text bg-light text-secondary" id="icone-email">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" aria-describedby="icone-senha" />
+                            <span class="input-group-text bg-light text-secondary" id="icone-senha">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <div class="form-check text-secondary">
+                                <input type="checkbox" class="form-check-input text-secondary" id="Remember-Me" />
+                                <label class="form-check-label" for="Remember-Me">Remember Me</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-dark btn-end" style="width: max-content">Acessar</button>
+                        </div>
+                    </div>
+                    <h6 class="modal-title text-secondary text-center">- Ou -</h6>
+                    <div class="d-grid gap-2 mb-1">
+                        <button class="btn btn-danger w-100 d-flex align-items-center" type="button">
+                            <i class="fab fa-google me-2 text-white"></i>
+                            <span class="text-start w-100">Logar com Email</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-link">Esqueceu sua senha?</button>
+                    <button type="button" class="btn btn-link">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="menu">
         <ul>

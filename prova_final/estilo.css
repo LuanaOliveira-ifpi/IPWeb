@@ -70,7 +70,19 @@ header {
         margin: 10px 0;
     }
 }
-
+.modal-content {
+    border-radius: 0;
+}
+.btn-dark {
+    background-color: #6c9955; 
+    border: none;
+}
+.btn-dark.btn-end {
+    font-size: 0.8rem;
+}
+.modal-header {
+    border-bottom: none;
+}
 
 #menu {
     background: #4b8a2f;
