@@ -37,8 +37,8 @@ header {
 }
 
 .navbar-brand {
-    text-align: center; /* Centraliza o texto da marca */
-    flex-grow: 1; /* Faz com que o texto da marca ocupe o espaço disponível */
+    text-align: center; 
+    flex-grow: 1; 
 }
 
 .search-box {
@@ -63,7 +63,7 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 6px; /* Ajusta o padding para telas menores */
+        padding: 6px; 
     }
 
     .navbar-brand {
@@ -107,16 +107,26 @@ header {
     color: #fff;
     text-decoration: none;
     padding: 5px 15px;
-    transition: background 0.3s ease;
 }
-
 #menu ul li a:hover {
     background: #6c9955;
     border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+    #menu ul {
+        flex-direction: column;
+    }
+
+    #menu ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
 main {
     padding: 20px;
-    margin-top: 80px; /* Ajuste para compensar a altura do header fixo */
+    margin-top: 80px; 
 
 }
 
@@ -143,12 +153,12 @@ main {
     background:#b2bead;
 }
 #Introducao, #Projetos, #Oportunidades, #Extensao {
-    display: block; /* Mantém o conteúdo fluido e simples */
+    display: block;
 }
 footer {
     background: #6c9955;
     color:#fff;
-    padding: 3px; /* Reduzido ainda mais o padding */
+    padding: 3px; 
     text-align: center;
     margin-top: 3px; 
     width: 100%;
@@ -157,7 +167,7 @@ footer {
 }
 
 footer p {
-    font-size: 10px; /* Tamanho da fonte reduzido para os parágrafos */
+    font-size: 10px; 
     margin: 0.3rem 0; 
 }
 
