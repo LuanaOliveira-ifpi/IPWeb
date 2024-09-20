@@ -1,11 +1,21 @@
+const btnAbrirModal = document.getElementById('btnAbrirModal');
+const modalContato = document.getElementById('modalContato');
+const btnFecharModal = document.getElementById('btnFecharModal');
 
-document.querySelectorAll('.sub-menu a, .navbar-nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Abrir modal
+btnAbrirModal.addEventListener('click', function() {
+    modalContato.style.display = 'block';
 });
 
+// Fechar modal
+btnFecharModal.addEventListener('click', function() {
+    modalContato.style.display = 'none';
+});
+
+// Fechar modal ao clicar fora da janela
+window.addEventListener('click', function(event) {
+    if (event.target === modalContato) {
+        modalContato.style.display = 'none';
+    }
+});
 

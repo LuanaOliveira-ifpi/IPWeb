@@ -3,33 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corpo Docente - IFPI</title>
+    <title>Corpo Docente - Licenciatura em Computação</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Inclua o menu principal aqui -->
-    <!-- Inclua o novo menu aqui -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- Conteúdo do header -->
+            <div class="container-fluid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg/768px-Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg.png" alt="Logo do IFPI" class="logo">
+                <a class="navbar-brand" href="#">Corpo Docente - Licenciatura em Computação</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#Docentes">Docentes</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <nav class="sub-menu">
-        <ul>
-            <li><a href="sobre.html">Sobre o Curso</a></li>
-            <li><a href="docentes.html">Corpo Docente</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <h1>Corpo Docente</h1>
-        <p>Informações sobre os docentes...</p>
-    </main>
-    
-    <footer>
-        <!-- Inclua o rodapé aqui -->
-    </footer>
+    <!-- Menu -->
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Voltar Home</a></li>
+        </ul>
+    </div>
+
+    <!-- Corpo Docente em Grid -->
+    <section id="Docentes" class="container my-5">
+        <article>
+            <img src="https://img.freepik.com/fotos-gratis/retrato-de-professor-de-conteudo-caucasiano-com-as-maos-postas_74855-10318.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof. Dr. Pedro Almodóvar</h2>
+            <p><strong>Área de Pesquisa:</strong> Inteligência Artificial</p>
+            <a href="#">Ver Publicações</a>
+        </article>
+        
+        <article>
+            <img src="https://www.designi.com.br/images/preview/11946330.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof.ª Dra. Greta Gerwing</h2>
+            <p><strong>Área de Pesquisa:</strong> Redes de Computadores</p>
+            <a href="#">Ver Publicações</a>
+        </article>
+
+        <article>
+            <img src="https://www.designi.com.br/images/preview/11946325.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof. Dr. Luca Guadagnino</h2>
+            <p><strong>Área de Pesquisa:</strong> Desenvolvimento de Software</p>
+            <a href="#">Ver Publicações</a>
+        </article>
+
+        <article>
+            <img src="https://img.freepik.com/fotos-gratis/mulher-de-tiro-medio-com-papelada_23-2150379181.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof.ª Dra. Agnes Varda</h2>
+            <p><strong>Área de Pesquisa:</strong> Segurança da Informação</p>
+            <a href="#">Ver Publicações</a>
+        </article>
+
+        <article>
+            <img src="https://www.designi.com.br/images/preview/11606538.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof. Dr. Robert Edgers</h2>
+            <p><strong>Área de Pesquisa:</strong> Programação Orientada a Objetos</p>
+            <a href="#">Ver Publicações</a>
+        </article>
+        
+        <article>
+            <img src="https://www.designi.com.br/images/preview/11606608.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof. Me. Steven Spilberg</h2>
+            <p><strong>Área de Pesquisa:</strong> Programação Web</p>
+            <a href="#">Ver Publicações</a>
+        </article>
+
+        <article>
+            <img src="https://www.shutterstock.com/image-photo/happy-teacher-explaining-mathematics-whiteboard-260nw-2491116323.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof. Dr. Quentin Tarantino</h2>
+            <p><strong>Área de Pesquisa:</strong> Robótica </p>
+            <a href="#">Ver Publicações</a>
+        </article>
+
+        <article>
+            <img src="https://img.freepik.com/fotos-gratis/professor-com-pilha-de-livros_23-2148665913.jpg" class="profile-img img-fluid" alt="Profile Image">
+            <h2>Prof.ª Dra. Sofia Coppola</h2>
+            <p><strong>Área de Pesquisa:</strong> Engenharia de Software</p>
+            <a href="#">Ver Publicações</a>
+        </article>
+    </section>
+
+    <!-- Rodapé -->
+    <div id="rodape">
+        <span class="copy">Copyright &copy; 2024</span> Todos os direitos reservados
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

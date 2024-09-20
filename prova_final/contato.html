@@ -3,33 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - IFPI</title>
+    <title>Contato - Licenciatura em Computação</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Inclua o menu principal aqui -->
-    <!-- Inclua o novo menu aqui -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- Conteúdo do header -->
+            <div class="container-fluid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg/768px-Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg.png" alt="Logo do IFPI" class="logo">
+                <a class="navbar-brand" href="#">Contato - Licenciatura em Computação</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#Contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <nav class="sub-menu">
-        <ul>
-            <li><a href="sobre.html">Sobre o Curso</a></li>
-            <li><a href="docentes.html">Corpo Docente</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <h1>Contato</h1>
-        <p>Formulário de contato...</p>
-    </main>
-    
-    <footer>
-        <!-- Inclua o rodapé aqui -->
+    <!-- Menu -->
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Voltar Home</a></li>
+        </ul>
+    </div>
+
+    <!-- Informações de Contato da Coordenação -->
+    <div id="contato-coordenacao" class="container my-5">
+        <h2>Informações de Contato da Coordenação</h2>
+        <p><strong>Coordenador:</strong> Profª. Dr. Kércia Maria</p>
+        <p><strong>Email:</strong> coordenacao@computacao.ifpi.edu.br</p>
+        <p><strong>Telefone:</strong> (86) 3215-5555</p>
+        <p><strong>Endereço:</strong> Av. Principal, 1234 - Bairro Central, Teresina - PI</p>
+    </div>
+
+    <!-- Botão para abrir o Modal do Formulário de Contato -->
+    <div class="container text-center mb-5">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalContato">Entre em Contato</button>
+    </div>
+
+    <!-- Modal do Formulário de Contato -->
+    <div class="modal fade" id="modalContato" tabindex="-1" aria-labelledby="modalContatoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalContatoLabel">Entre em Contato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="enviar_contato.php" method="POST" class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="matricula" class="form-label">Matrícula</label>
+                            <input type="text" class="form-control" id="matricula" name="matricula" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="assunto" class="form-label">Assunto</label>
+                            <input type="text" class="form-control" id="assunto" name="assunto" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="rodape">
+        <span class="copy">&copy; 2024 Todos os direitos reservados</span>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
+
+

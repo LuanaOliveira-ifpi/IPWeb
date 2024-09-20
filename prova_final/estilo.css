@@ -8,7 +8,7 @@ body {
 }
 
 .background-wrapper {
-    background: #f4f4f4;
+    background: #e3e1e1;
     padding: 20px;
     max-width: 1200px;
     margin: auto;
@@ -132,7 +132,7 @@ main {
     margin-bottom: 60px;
     width: 100%;
     padding: 20px;
-    background:#fff;
+    background:#e3e1e1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

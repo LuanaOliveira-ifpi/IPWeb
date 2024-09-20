@@ -3,33 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre o Curso - IFPI</title>
+    <title>Sobre o Curso</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Inclua o menu principal aqui -->
-    <!-- Inclua o novo menu aqui -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <!-- Conteúdo do header -->
+            <div class="container-fluid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg/768px-Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg.png" alt="Logo do IFPI" class="logo">
+                <a class="navbar-brand" href="#">Sobre o Curso - Licenciatura em Computação</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#Sobre">Sobre o Curso</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Imagens">Galeria de Imagens</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <nav class="sub-menu">
-        <ul>
-            <li><a href="sobre.html">Sobre o Curso</a></li>
-            <li><a href="docentes.html">Corpo Docente</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <h1>Sobre o Curso</h1>
-        <p>Informações sobre o curso...</p>
-    </main>
-    
-    <footer>
-        <!-- Inclua o rodapé aqui -->
-    </footer>
+    <!-- Menu -->
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Voltar Home</a></li>
+        </ul>
+    </div>
+
+    <!-- Conteúdo do Curso -->
+    <section id="Sobre" class="container my-5">
+        <h2>História do Curso</h2>
+        <p>A Licenciatura em Computação do Instituto Federal do Piauí foi criada com o objetivo de atender à demanda por profissionais qualificados na área de tecnologia da informação, focando na formação de docentes para o ensino de computação em diferentes níveis de educação. Desde sua fundação, o curso tem se destacado pela qualidade de ensino e pela inovação em suas metodologias.</p>
+
+        <h2>Descrição do Curso</h2>
+        <p>O curso de Licenciatura em Computação oferece uma formação ampla e atualizada, preparando os alunos para atuarem como educadores e profissionais em tecnologia da informação. O currículo é composto por disciplinas que abordam tanto os fundamentos da computação quanto as práticas pedagógicas necessárias para o ensino eficaz da matéria.</p>
+
+        <h2>Objetivos e Metas</h2>
+        <ul>
+            <li>Formar profissionais capacitados para atuar no ensino de computação.</li>
+            <li>Promover a inclusão digital e o uso consciente das tecnologias da informação.</li>
+            <li>Desenvolver competências em pesquisa e inovação na área da educação e tecnologia.</li>
+        </ul>
+        <hr>
+        <h2>Currículo e Disciplinas Oferecidas</h2>
+        <p>O currículo do curso inclui disciplinas como:</p>
+        <table class="table-shadow">
+            <tr>
+                <td>Algoritmos e Lógica de Programação</td>
+            </tr>
+            <tr>
+                <td>Banco de Dados</td>
+            </tr>
+            <tr>
+                <td>Desenvolvimento de Sistemas</td>
+            </tr>
+            <tr>
+                <td>Educação a Distância</td>
+            </tr>
+            <tr>
+                <td>Didática e Metodologia de Ensino</td>
+            </tr>
+            <tr>
+                <td>Projetos de Software</td>
+            </tr>
+            <tr>
+                <td>Ética e Cidadania Digital</td>
+            </tr>
+        </table>
+<hr>        
+        
+<h2>Galeria de Imagens</h2>
+<div class="container conteudo" id="Imagens">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 coluna">
+            <img class="img1" src="https://piauihoje.com/uploads/albuns/130/whatsapp-image-2023-11-03-at-16-28-28.jpeg" alt="Imagem 1">
+        </div>
+
+        <div class="col-md-6 col-sm-6 coluna">
+            <img class="img2" src="https://fastly.4sqi.net/img/general/600x600/59983710_oUn38PMJSl36s7zBj8ZGkhLUucYt4QWpQyrwslmTEqU.jpg" alt="Imagem 2">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 coluna">
+                    <img class="img3" src="https://costagiselda.wordpress.com/wp-content/uploads/2016/07/img_9458.jpg?w=908" alt="Imagem 3">
+                </div>
+                <div class="col-md-6 col-sm-6 coluna">
+                    <img class="img3" src="https://www.ifpi.edu.br/teresinazonasul/noticias/teresina-zona-sul-organiza-evento-sobre-informatica-e-educacao-inclusiva/design-sem-nome-11.png/@@images/aa457e9b-fb33-4d78-8a31-05fe5af4efed.png" alt="Imagem 4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="rodape" class="text-center py-3">
+<span class="copy">&copy; 2024 Todos os direitos reservados</span>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
