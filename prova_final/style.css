@@ -164,20 +164,16 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     overflow: hidden; 
-
 }
 
 .table-shadow td {
     padding: 10px;
+    border-bottom: 1px solid #ccc; /* Borda inferior para separação */
     transition: box-shadow 0.3s; /* Efeito suave ao passar o mouse */
 }
 
 .table-shadow td:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Sombra ao passar o mouse */
-}
-.table-shadow td {
-    padding: 10px;
-    border-bottom: 1px solid #ccc; /* Borda inferior para separação */
 }
 
 .table-shadow tr:last-child td {
